@@ -1,0 +1,15 @@
+# 生成的文件
+output/
+*.docx
+*.pdf
+
+# 临时文件
+HSM.docx
+HSM.md
+
+# 参考资料（不提交）
+同学论文.docx
+同学论文.md
+
+# 中间文件
+chapters.txt
