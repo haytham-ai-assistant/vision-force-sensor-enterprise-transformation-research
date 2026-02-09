@@ -1,0 +1,13 @@
+# Abstract
+
+This paper takes Shenzhen Haytham Technology Co., Ltd. (HSM) as a case study to examine the strategic transformation of visual force sensor enterprises in the context of digital transformation and domestic substitution. With the normalization of Sino-US technological competition and the deepening of Industry 4.0 strategy, visual force sensors, as the core technology for infrastructure safety monitoring, are rapidly evolving from laboratory research tools to industrial-grade standardized products. As a globally leading provider of DIC visual sensing technology solutions, HSM faces strategic challenges in transitioning from project-based to product-driven business models during its rapid development.
+
+This research adopts a case study methodology, combining literature review, PEST analysis, Porter's Five Forces model, and SWOT analysis to systematically analyze the drivers, implementation paths, and outcomes of HSM's strategic transformation. The study finds that the project-based model led to issues such as long payment cycles (accounts receivable turnover days reaching 270 days) and high personnel costs, driving the company's shift toward productization. The transformation implementation path includes: technological strategy—building three major product lines centered on third-generation DIC technology; market strategy—expanding from research markets to industrial markets; organizational strategy—optimizing talent structure (R&D personnel ratio increased from 25% to 45%); digital transformation—constructing a safety monitoring large model platform; and ecosystem collaboration—establishing an industry-academia-research-application collaborative innovation system.
+
+The transformation effectiveness evaluation shows that HSM has achieved significant improvements across five dimensions: financial performance, market position, technological innovation, organizational capability, and sustainable development. Gross profit margin increased from 45% to 65%, net profit margin from 8% to 18%, accounts receivable turnover days shortened from 270 to 90 days, and per capita output increased by 2.5 times. The research concludes that strategic transformation of hard-tech enterprises must be driven by technological innovation, building sustainable competitive advantages through product standardization, organizational restructuring, and ecosystem collaboration.
+
+This study enriches the theoretical framework of technology enterprise transformation, provides actionable transformation pathways for similar enterprises, and offers decision-making references for policy formulation.
+
+# Keywords
+
+Visual force sensor; Enterprise strategic transformation; Digital transformation; Hard-tech enterprise; DIC technology; Haytham Technology
