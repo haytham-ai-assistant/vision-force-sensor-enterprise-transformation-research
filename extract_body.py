@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import re
+from datetime import datetime
 
 def extract_body(input_file, output_file):
     with open(input_file, 'r', encoding='utf-8') as f:
@@ -65,5 +66,7 @@ def extract_body(input_file, output_file):
 
 if __name__ == "__main__":
     input_file = "complete_paper.md"
-    output_file = "查重版_正文.md"
+    # 添加时间戳以便区分不同版本
+    timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
+    output_file = f"查重版_正文_{timestamp}.md"
     extract_body(input_file, output_file)

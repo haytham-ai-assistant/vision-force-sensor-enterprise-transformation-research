@@ -13,10 +13,11 @@ echo "=== 北京大学硕士论文格式调整 ==="
 echo "使用模板: $TEMPLATE_FILE"
 echo ""
 
-# 输出文件命名
+# 输出文件命名（包含时间戳以便区分版本）
 TIMESTAMP=$(date +%Y%m%d_%H%M%S)
-OUTPUT_DOCX="output/符合模板格式_${TIMESTAMP}.docx"
-OUTPUT_PDF="output/符合模板格式_${TIMESTAMP}.pdf"
+PAPER_TITLE="视觉力学传感器企业战略转型研究"
+OUTPUT_DOCX="output/${PAPER_TITLE}_格式调整版_${TIMESTAMP}.docx"
+OUTPUT_PDF="output/${PAPER_TITLE}_格式调整版_${TIMESTAMP}.pdf"
 
 echo "步骤1: 准备封面页..."
 # 创建临时封面页（包含元数据）
