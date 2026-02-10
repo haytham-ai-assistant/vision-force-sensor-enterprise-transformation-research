@@ -45,7 +45,6 @@ pandoc /tmp/cover_temp.md complete_paper.md \
     --reference-doc="$TEMPLATE_FILE" \
     --toc \
     --toc-depth=3 \
-    --number-sections \
     --metadata date="二〇二六年二月" \
     --metadata author="老毕" \
     --metadata title="视觉力学传感器企业战略转型研究——以HSM为例" \
@@ -70,7 +69,6 @@ pandoc /tmp/cover_temp.md complete_paper.md \
     --pdf-engine=xelatex \
     --toc \
     --toc-depth=3 \
-    --number-sections \
     --metadata date="二〇二六年二月" \
     --metadata author="老毕" \
     --metadata title="视觉力学传感器企业战略转型研究——以HSM为例" \
