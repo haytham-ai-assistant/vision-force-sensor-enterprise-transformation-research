@@ -25,15 +25,21 @@ def extract_body(input_file, output_file):
     else:
         body_start += len(body_start_marker)
     
-    # 找到正文结束位置（致谢部分之前）
-    # 查找"# 致谢"或"## 致谢"
-    acknowledgments_pattern = r'^# 致谢'
-    match = re.search(acknowledgments_pattern, content[body_start:], re.MULTILINE)
+    # 找到正文结束位置（参考文献部分之前）
+    # 首先查找"# 参考文献"
+    references_pattern = r'^# 参考文献'
+    match = re.search(references_pattern, content[body_start:], re.MULTILINE)
     if match:
         body_end = body_start + match.start()
     else:
-        # 如果没有致谢部分，使用全文
-        body_end = len(content)
+        # 如果没有参考文献部分，查找"# 致谢"
+        acknowledgments_pattern = r'^# 致谢'
+        match = re.search(acknowledgments_pattern, content[body_start:], re.MULTILINE)
+        if match:
+            body_end = body_start + match.start()
+        else:
+            # 如果都没有，使用全文
+            body_end = len(content)
     
     # 提取正文
     body_content = content[body_start:body_end]
