@@ -39,7 +39,7 @@ pandoc cover_text.md complete_paper.md \
     --metadata title="视觉力学传感器企业战略转型研究——以HSM为例" \
     --metadata institute="北京大学汇丰商学院" \
     --metadata program="高级管理人员工商管理硕士（EMBA）" \
-    --metadata supervisor="（请填写导师姓名）" \
+    --metadata supervisor="宋教授" \
     --variable papersize=a4 \
     --variable geometry:margin=2.6cm \
     --variable linestretch=1.0 \

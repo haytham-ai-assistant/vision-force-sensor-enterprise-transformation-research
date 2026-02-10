@@ -2,7 +2,7 @@
 title: 视觉力学传感器企业战略转型研究——以HSM为例
 subtitle: 硕士学位论文
 author: 老毕
-advisor: （请填写导师姓名）
+advisor: 宋教授
 school: 北京大学汇丰商学院
 program: 高级管理人员工商管理硕士（EMBA）
 date: 2026年2月
@@ -37,7 +37,7 @@ header-includes:
     \large\textbf{高级管理人员工商管理硕士（EMBA）}
     
     \vspace{2cm}
-    \large\textbf{导师：（请填写导师姓名）}
+    \large\textbf{导师：宋教授}
     
     \vspace{2cm}
     \large\textbf{2026年2月}
