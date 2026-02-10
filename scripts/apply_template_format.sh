@@ -20,27 +20,16 @@ OUTPUT_DOCX="output/${PAPER_TITLE}_格式调整版_${TIMESTAMP}.docx"
 OUTPUT_PDF="output/${PAPER_TITLE}_格式调整版_${TIMESTAMP}.pdf"
 
 echo "步骤1: 准备封面页..."
-# 创建临时封面页（包含元数据）
-cat > /tmp/cover_temp.md << 'EOF'
----
-title: 视觉力学传感器企业战略转型研究——以HSM为例
-author: 老毕
-institute: 北京大学汇丰商学院
-program: 高级管理人员工商管理硕士（EMBA）
-supervisor: （请填写导师姓名）
-date: 二〇二六年二月
-abstract: |
-  本文以深圳市海塞姆科技有限公司（HSM）为案例，研究视觉力学传感器企业在数字化转型和国产替代背景下的战略转型问题...
-keywords: [视觉力学传感器, 企业战略转型, 数字化转型, 硬科技企业, DIC技术, 海塞姆科技]
-abstract-en: |
-  This paper takes Shenzhen Haytham Technology Co., Ltd. (HSM) as a case study to examine the strategic transformation of visual force sensor enterprises...
-keywords-en: [Visual force sensor, Enterprise strategic transformation, Digital transformation, Hard-tech enterprise, DIC technology, Haytham Technology]
----
-EOF
+# 使用现有的封面页文件
+if [ ! -f "cover_text.md" ]; then
+    echo "错误: cover_text.md文件不存在"
+    exit 1
+fi
 
 echo "步骤2: 合并文档并应用模板样式..."
 # 使用pandoc转换，应用模板样式
-pandoc /tmp/cover_temp.md complete_paper.md \
+# 添加字体变量确保中文字体正确应用
+pandoc cover_text.md complete_paper.md \
     -o "$OUTPUT_DOCX" \
     --reference-doc="$TEMPLATE_FILE" \
     --toc \
@@ -53,7 +42,10 @@ pandoc /tmp/cover_temp.md complete_paper.md \
     --metadata supervisor="（请填写导师姓名）" \
     --variable papersize=a4 \
     --variable geometry:margin=2.6cm \
-    --variable linestretch=1.0
+    --variable linestretch=1.0 \
+    --variable mainfont="SimSun" \
+    --variable sansfont="SimHei" \
+    --variable monofont="NSimSun"
 
 if [ $? -eq 0 ]; then
     echo "✅ Word文档生成成功: $OUTPUT_DOCX"
@@ -64,7 +56,7 @@ fi
 
 echo "步骤3: 生成PDF版本（使用LaTeX引擎）..."
 # 生成PDF版本（使用xelatex支持中文字体）
-pandoc /tmp/cover_temp.md complete_paper.md \
+pandoc cover_text.md complete_paper.md \
     -o "$OUTPUT_PDF" \
     --pdf-engine=xelatex \
     --toc \
@@ -100,9 +92,6 @@ echo "  2. 章标题: 中文数字，黑体三号，居中"
 echo "  3. 节标题: 阿拉伯数字，黑体四号，居左"
 echo "  4. 正文: 小四宋体/Times New Roman，固定行距20磅"
 echo "  5. 页面设置: A4，页边距上3.0cm/下2.5cm/左右2.6cm"
-
-# 清理临时文件
-rm -f /tmp/cover_temp.md
 
 echo ""
 echo "✅ 格式调整脚本执行完成"
