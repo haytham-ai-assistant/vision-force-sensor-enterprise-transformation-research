@@ -3,6 +3,10 @@ output/
 *.docx
 *.pdf
 
+# 例外：final_submission目录下的最终提交文档应该被跟踪
+!final_submission/*.docx
+!final_submission/*.pdf
+
 # 临时文件
 HSM.docx
 HSM.md
